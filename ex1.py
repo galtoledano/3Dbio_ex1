@@ -1,3 +1,6 @@
+# 3D-Bio, Ex1
+# by yahel yedidya and gal toledano
+
 import Bio.PDB as pdb
 import sys
 from Bio import pairwise2
