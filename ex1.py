@@ -1,7 +1,6 @@
 import Bio.PDB as pdb
 import sys
 from Bio import pairwise2
-import Bio.Seq as seq
 
 
 # BONUS 9.2 IMPLEMENTED
