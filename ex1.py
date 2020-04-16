@@ -31,16 +31,18 @@ def q9_1(id1, chain1, id2, chain2):
     # print(alignments)
     # ignore_inx1 = [i for i in range(len(alignments[0][0])) if alignments[0][0][i] == "-"]
     # ignore_inx2 = [i for i in range(len(alignments[0][1])) if alignments[0][1][i] == "-"]
+
     # creating atoms to align lists
     atoms1 = create_atoms_list(struct1, chain1, [])
     atoms2 = create_atoms_list(struct2, chain2, [])
     # if len(atoms1) != len(atoms2):
     #     atoms2 = [atoms2[i] for i in range(len(atoms2)) if i not in ignore_inx1]
     #     atoms1 = [atoms1[i] for i in range(len(atoms1)) if i not in ignore_inx2]
+
     # making the align
     super_imposer = pdb.Superimposer()
-    super_imposer.set_atoms(atoms2, atoms1)
-    super_imposer.apply(struct1[0].get_atoms())
+    super_imposer.set_atoms(atoms1, atoms2)
+    super_imposer.apply(struct2[0].get_atoms())
     print(super_imposer.rms)
 
     # saving to file
